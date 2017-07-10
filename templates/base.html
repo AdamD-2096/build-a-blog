@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+        
+        {% block content %}
+        {% endblock %}
+        
+        <h1>
+            <a href="/blog">
+                view blog
+            </a>
+        </h1>
+        <h1>
+            <a href="/post_form">
+                make new post
+            </a>
+        </h1>
+        <h1>
+            <a href="/delete_post">
+                delete post
+            </a>
+        </h1>
+        <h1>
+            <a href="/">
+                root
+            </a>
+        </h1>
+    </body>
+</html>
