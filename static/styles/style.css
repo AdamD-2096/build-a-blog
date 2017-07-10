@@ -1,3 +1,22 @@
 body{
-    background-color: #88c
+    background-color: #338
+}
+.error{
+    color: #b00;
+}
+a{
+    color: #45d
+}
+a:hover{
+    text-shadow: 0.15em 0.15em #115
+}
+textarea {
+    margin: 10px 0;
+    width: 340px;
+    height: 120px;
+}
+form {
+    padding: 20px;
+    width: 200px;
+    font: 16px sans-serif;
 }

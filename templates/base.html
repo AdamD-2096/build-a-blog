@@ -6,29 +6,26 @@
     </head>
 
     <body>
-        
-        {% block content %}
-        {% endblock %}
-        
-        <h1>
+        <nav>
+            <a href="/post_form">
+                make new post
+            </a> |
             <a href="/blog">
                 view blog
             </a>
-        </h1>
-        <h1>
-            <a href="/post_form">
-                make new post
-            </a>
-        </h1>
-        <h1>
-            <a href="/delete_post">
-                delete post
-            </a>
-        </h1>
-        <h1>
-            <a href="/">
-                root
-            </a>
-        </h1>
+        </nav>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            <ul>
+            {% for category,message in messages %}
+                <li class="{{category}}">{{message}}</li>
+            {% endfor %}
+            </ul>
+            <hr/>
+        {% endwith %}
+
+        {% block content %}
+        {% endblock %}
+
+
     </body>
 </html>

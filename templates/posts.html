@@ -11,11 +11,18 @@
             <ul>
                 {% for post in posts %}
                 <li>
-                    {{post.title}}
+                    <a href="/blog?id={{post.id}}">{{post.title}}<a/>
                 </li>
                 {% endfor %}
             </ul>
         {% endif %}
 
+        <hr/>
+
+        <h4>
+            <a href="/post_form">
+                make new post
+            </a>
+        </h4>
 
 {% endblock %}
