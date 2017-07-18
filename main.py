@@ -49,7 +49,7 @@ def post_form():
         new_post = Post(title, body)
         db.session.add(new_post)
         db.session.commit()
-        return redirect("/post?id=" + str(new_post.id))
+        return redirect("/blog?id=" + str(new_post.id))
 
     return render_template("blog.html", title="New Post")
 
